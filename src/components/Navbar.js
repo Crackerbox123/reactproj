@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     // open if expandNavbar is true, and close if expandNavbar is false
-    <div className='navbar' id={expandNavbar ? "open" : "close"}>Navbar
+    <div className='navbar' id={expandNavbar ? "open" : "close"}>
         <div className='toggleButton'>
           <button onClick={() => {
             setExpandNavbar((prev) => !prev);
@@ -36,8 +36,9 @@ function Navbar() {
         </div>
         <div className='links'>
             <Link to="/"> Home </Link>
+            <Link to="/about"> About Me </Link>
             <Link to="/projects"> Projects </Link>
-            <Link to="/experience"> Experience </Link>
+            <Link to="/contact"> Contact Me </Link>
 
             
         </div>

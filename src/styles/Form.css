@@ -1,0 +1,10 @@
+.centerform {
+    display: block;
+    align: center;
+}
+
+form {
+    display: inline-block;
+    align-self: center;
+
+}
