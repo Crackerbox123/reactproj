@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from "react-router-dom";
-import ReorderIcon from "@material-ui/icons/Reorder";
 
-
+// import the hamburger menu and social icons
+import ReorderIcon from '@mui/icons-material/Reorder';
 
 //import navbar CSS
 
 import "../styles/Navbar.css";
-
-
-
 
 function Navbar() {
   // logic to determain if screensize triggers ReorderIcon logic
@@ -28,11 +25,14 @@ function Navbar() {
     // open if expandNavbar is true, and close if expandNavbar is false
     <div className='navbar' id={expandNavbar ? "open" : "close"}>Navbar
         <div className='toggleButton'>
-          
-            <button onClick={() => {setExpandNavbar((prev) => !prev)}}>
-              <ReorderIcon />
+          <button onClick={() => {
+            setExpandNavbar((prev) => !prev);
+           }}
+           >
 
-            </button>
+            <ReorderIcon />
+           </button>                     
+           
         </div>
         <div className='links'>
             <Link to="/"> Home </Link>
