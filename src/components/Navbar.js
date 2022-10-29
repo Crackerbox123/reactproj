@@ -1,17 +1,48 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useEffect } from 'react'
+import { Link, useLocation } from "react-router-dom";
+import ReorderIcon from "@material-ui/icons/Reorder";
+
+
+
+//import navbar CSS
+
+import "../styles/Navbar.css";
+
+
+
+
 function Navbar() {
+  // logic to determain if screensize triggers ReorderIcon logic
+    const [expandNavbar, setExpandNavbar] = useState(false);
+
+    // react dom hook to determine where user is
+    const location = useLocation();
+
+    
+    useEffect(() => {
+      setExpandNavbar(false);
+    }, [location]);
+
+
   return (
-    <div className='navbar'>Navbar
+    // open if expandNavbar is true, and close if expandNavbar is false
+    <div className='navbar' id={expandNavbar ? "open" : "close"}>Navbar
         <div className='toggleButton'>
-            <button></button>
+          
+            <button onClick={() => {setExpandNavbar((prev) => !prev)}}>
+              <ReorderIcon />
+
+            </button>
         </div>
         <div className='links'>
             <Link to="/"> Home </Link>
+            <Link to="/projects"> Projects </Link>
+            <Link to="/experience"> Experience </Link>
+
             
         </div>
     </div>
   )
 }
 
-export default Navbar
+export default Navbar;
