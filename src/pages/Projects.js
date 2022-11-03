@@ -8,7 +8,7 @@ import Quiz from '../assets/Quiz.png'
 import NodeGenny from '../assets/NodeGenny.png'
 import WasteNot from '../assets/WasteNot.png'
 import Weather from '../assets/Weather.png'
-import TeamProfileGenny from '../assets/TeamProfileGenny.png'
+import InspiredTravels from '../assets/Inspired.png'
 
 import "../styles/Projects.css";
 
@@ -17,7 +17,7 @@ function Projects() {
     <div className='projects'>
       <h1> My Personal Projects </h1>
       <div className='projectList'>   
-        <ProjectItem name="Team Profile Generator" image={TeamProfileGenny}/>
+        <ProjectItem name="Inspired Travels" image={InspiredTravels}/>
         <ProjectItem name="Rental Recap" image={RentalRecap}/>
         <ProjectItem name="Quiz" image={Quiz}/>
         <ProjectItem name="Node Readme Generator" image={NodeGenny}/>
