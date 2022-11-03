@@ -8,7 +8,7 @@ import Quiz from '../assets/Quiz.png'
 import NodeGenny from '../assets/NodeGenny.png'
 import WasteNot from '../assets/WasteNot.png'
 import Weather from '../assets/Weather.png'
-import InspiredTravels from '../assets/Inspired.png'
+import InspiredTravels from '../assets/InspiredTravels.png'
 
 import "../styles/Projects.css";
 
